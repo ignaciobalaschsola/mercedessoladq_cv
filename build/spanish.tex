@@ -1,0 +1,126 @@
+% Page Layout
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Page Layout
+\geometry{margin=1cm, columnsep=1cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\normalsize\bfseries}
+\renewcommand{\cvsubsectionfont}{\small\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+
+% Personal Information
+\name{Mercedes Sol\'a de Querol}
+\tagline{Abogada Especialista en Protecci\'on de Datos}
+\photoL{3cm}{profile} % Enlarged profile picture on the left
+\personalinfo{
+  \email{msoladq@gmail.com}  \phone{+34 687 03 52 70}
+}
+
+\begin{document}
+\thispagestyle{empty}
+\clearpage
+\makecvheader
+
+% Set column ratio: Left (30%) | Right (70%)
+\columnratio{0.3}
+\begin{paracol}{2}
+
+% ===== Left Column =====
+\cvsection{Perfil}
+Soy licenciada en Derecho con el Posgrado de Derecho Europeo de Protecci\'on de Datos Personales. Me considero una persona proactiva, polivalente, y con alto grado de implicaci\'on y responsabilidad sobre las tareas asignadas. He residido tres a\~nos en Estados Unidos y poseo una comunicaci\'on h\'abil con personas multiculturales.
+
+\cvsection{Idiomas}
+
+\begin{minipage}{\linewidth}
+  \cvtag{Espa\~nol (Nativo)}
+  \cvtag{Catal\'an (Nativo)}
+  \cvtag{Ingl\'es (Competencia Profesional)}
+  \cvtag{Franc\'es (Comprensi\'on B\'asica)}
+\end{minipage}
+
+
+
+
+
+\cvsection{Habilidades}
+\begin{itemize}
+  \item Capacidad de an\'alisis
+  \item Capacidad para resolver problemas
+  \item Adaptaci\'on al cambio
+  \item Habilidades comunicativas
+\end{itemize}
+
+\switchcolumn
+
+% ===== Right Column =====
+\cvsection{Experiencia Profesional}
+\cvevent{Abogada Especialista en Protecci\'on de Datos}{Dur\'an y Sindreu Abogados}{Barcelona}{}
+\begin{itemize}
+  \item Revisi\'on y redacci\'on de diferentes tipos de contratos y pol\'iticas de privacidad.
+  \item Elaboraci\'on de informes y notas jur\'idicas.
+  \item Redacci\'on de noticias jur\'idicas de inter\'es.
+  \item Trabajo en equipo.
+\end{itemize}
+
+\cvevent{Gerente Inmobiliaria}{Aut\'onoma}{Madrid}{}
+\begin{itemize}
+  \item Translado de familia de empresario extranjero.
+  \item B\'usqueda, compra y reforma de vivienda.
+\end{itemize}
+
+\cvevent{Gesti\'on Comercial Internacional}{Laboratorios KIN}{Barcelona}{}
+\begin{itemize}
+  \item Gestiones de comunicaci\'on y administraci\'on con los distintos distribuidores en la rama internacional de la compa\~n\'ia.
+\end{itemize}
+
+\cvsection{Formaci\'on}
+\cvevent{Posgrado de Derecho Europeo de Protecci\'on de Datos}{Universidad de Barcelona}{}{}
+\begin{itemize}
+  \item Tesis de posgrado: Datos de salud y la protecci\'on de datos personales en el derecho europeo.
+  \item Calificaci\'on: Sobresaliente
+\end{itemize}
+
+\cvevent{Curso de Derecho Privado}{Universidad de pr\'actica jur\'idica}{Madrid}{}
+\cvevent{Curso de Derecho de Autor}{Universidad Complutense}{Madrid}{}
+\cvevent{Licenciatura en Derecho}{Universidad de Barcelona}{}{}
+
+\end{paracol}
+\end{document}

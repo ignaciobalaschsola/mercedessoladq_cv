@@ -1,0 +1,119 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Page Layout
+\geometry{margin=1cm, columnsep=1cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\normalsize\bfseries}
+\renewcommand{\cvsubsectionfont}{\small\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+
+% Personal Information
+\name{Mercedes Sol\'a de Querol}
+\tagline{Advocada Especialista en Protecci\'o de Dades}
+\photoL{3cm}{profile} % Enlarged profile picture on the left
+\personalinfo{
+  \email{msoladq@gmail.com}  \phone{+34 687 03 52 70}
+}
+
+\begin{document}
+\thispagestyle{empty}
+\clearpage
+\makecvheader
+
+% Set column ratio: Left (30%) | Right (70%)
+\columnratio{0.3}
+\setlength{\columnsep}{1cm}
+\begin{paracol}{2}
+
+% ===== Left Column =====
+\cvsection{Perfil}
+Sóc llicenciada en Dret amb el Postgrau de Dret Europeu de Protecció de Dades Personals. Em considero una persona proactiva, polivalent, i amb un alt grau d'implicació i responsabilitat sobre les tasques assignades. He residit tres anys als Estats Units i tinc habilitats de comunicació amb persones multiculturals.
+
+\cvsection{Idiomes}
+\cvtag{Català (Natiu)}
+\cvtag{Espanyol (Natiu)}
+\cvtag{Anglès (Competència Professional)}
+\cvtag{Francès (Comprensió Bàsica)}
+
+\cvsection{Habilitats}
+\begin{itemize}
+  \item Capacitat d'anàlisi
+  \item Capacitat per resoldre problemes
+  \item Adaptació al canvi
+  \item Habilitats comunicatives
+\end{itemize}
+
+\switchcolumn
+
+% ===== Right Column =====
+\cvsection{Experiència Professional}
+\cvevent{Advocada Especialista en Protecció de Dades}{Durán i Sindreu Advocats}{Barcelona}{}
+\begin{itemize}
+  \item Revisió i redacció de diferents tipus de contractes i polítiques de privacitat.
+  \item Elaboració d'informes i notes jurídiques.
+  \item Redacció de notícies jurídiques d'interès.
+  \item Treball en equip.
+\end{itemize}
+
+\cvevent{Gerent Immobiliària}{Autònoma}{Madrid}{}
+\begin{itemize}
+  \item Trasllat de família d'empresari estranger.
+  \item Recerca, compra i reforma d'habitatges.
+\end{itemize}
+
+\cvevent{Gestió Comercial Internacional}{Laboratoris KIN}{Barcelona}{}
+\begin{itemize}
+  \item Gestió de comunicació i administració amb els diferents distribuïdors en la branca internacional de la companyia.
+\end{itemize}
+
+\cvsection{Formació}
+\cvevent{Postgrau de Dret Europeu de Protecció de Dades}{Universitat de Barcelona}{}{}
+\begin{itemize}
+  \item Tesi de postgrau: Dades de salut i la protecció de dades personals en el dret europeu.
+  \item Qualificació: Excel·lent
+\end{itemize}
+
+\cvevent{Curs de Dret Privat}{Universitat de pràctica jurídica}{Madrid}{}
+\cvevent{Curs de Dret d'Autor}{Universitat Complutense}{Madrid}{}
+\cvevent{Llicenciatura en Dret}{Universitat de Barcelona}{}{}
+
+\end{paracol}
+\end{document}
